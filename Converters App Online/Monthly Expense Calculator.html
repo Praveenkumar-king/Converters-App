@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Expense Calculator | Converters App Online</title>
+    <link rel="stylesheet" href="CSS/Monthly Expense.css">
+    <link rel="icon" href="img/PK New Logo.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Logo on the left -->
+        <div class="logo">
+            <a href="https://convertersapponline.netlify.app/">
+                <img src="img/New Logo For PK.png" alt="Logo" />
+            </a>
+        </div>  
+        <!-- Navigation links aligned to the right -->
+        <ul class="nav-links">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Currency.html">Currency</a></li>
+            <li><a href="EMI.html">EMI</a></li>
+            <li><a href="Monthly Expense Calculator.html">Monthly Expense</a></li>
+            <li><a href="Electricity Bill.html">Electricity Bill </a></li>
+            <li><a href="Pressure.html">Pressure</a></li>
+            <li><a href="Speed.html">Speed</a></li>
+            <li><a href="Temperature.html">Temperature</a></li>
+            <li><a href="unit converter.html">Unit</a></li>
+            <li><a href="Volume.html">Volume</a></li>
+            <li><a href="Under Construction.html">Light</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Monthly Expense Calculator</h2>
+        <div class="box">
+            <label for="income">Monthly Income (INR/USD):</label>
+            <input type="number" id="income" placeholder="Enter Your Monthly Income">
+        </div>
+        
+        <div class="box">
+            <label for="expense-category">Expense Category:</label>
+            <select id="expense-category">
+                <option value="---Select---">---Please Select---</option>
+                <option value="Housing">Housing</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Food & Groceries">Food & Groceries</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Health & Medical">Health & Medical</option>
+                <option value="Financial">Financial</option>
+                <option value="Personal & Family">Personal & Family</option>
+                <option value="Miscellaneous">Miscellaneous</option>
+            </select>
+        </div>
+          
+        <div class="box">
+            <label for="sub-category">Sub-Category:</label>
+            <select id="sub-category">
+                <option value="---Select---">---Please Select---</option>
+                
+                <!-- Housing -->
+                <option value="Home Loan EMI">Home Loan EMI</option>
+                <option value="Home Rent">Home Rent</option>
+                <option value="Property Taxes">Property Taxes</option>
+                <option value="Home Insurance">Home Insurance</option>
+                <option value="Maintenance & Repairs">Maintenance & Repairs</option>
+                <option value="HOA Fees">HOA Fees</option>
+        
+                <!-- Utilities -->
+                <option value="Electricity Bill">Electricity Bill</option>
+                <option value="Water Bill">Water Bill</option>
+                <option value="Gas Bill">Gas Bill</option>
+                <option value="Internet & WiFi">Internet & WiFi</option>
+                <option value="Cable TV / Streaming">Cable TV / Streaming</option>
+                <option value="Garbage Collection">Garbage Collection</option>
+        
+                <!-- Food & Groceries -->
+                <option value="Monthly Groceries">Monthly Groceries</option>
+                <option value="Dining Out / Takeout">Dining Out / Takeout</option>
+        
+                <!-- Transportation -->
+                <option value="Car Loan EMI">Car Loan EMI</option>
+                <option value="Fuel / Petrol / Diesel">Fuel / Petrol / Diesel</option>
+                <option value="Public Transport">Public Transport</option>
+                <option value="Car Maintenance & Repairs">Car Maintenance & Repairs</option>
+                <option value="Vehicle Insurance">Vehicle Insurance</option>
+                <option value="Parking Fees / Tolls">Parking Fees / Tolls</option>
+        
+                <!-- Health & Medical -->
+                <option value="Health Insurance">Health Insurance</option>
+                <option value="Doctor Visits & Medications">Doctor Visits & Medications</option>
+                <option value="Gym Membership">Gym Membership</option>
+        
+                <!-- Debt & Financial -->
+                <option value="Credit Card Bills">Credit Card Bills</option>
+                <option value="Personal Loan EMI">Personal Loan EMI</option>
+                <option value="Education Loan EMI">Education Loan EMI</option>
+                <option value="Investments & Savings">Investments & Savings</option>
+        
+                <!-- Personal & Family -->
+                <option value="Child’s School / College Fees">Child’s School / College Fees</option>
+                <option value="Mobile Phone Bill">Mobile Recharge Bill</option>
+                <option value="Entertainment Subscriptions(Eg.SunNXT,Amazon Prime,Netflix,etc...)">Entertainment Subscriptions(Eg.SunNXT,Amazon Prime,Netflix,etc...)</option>
+                <option value="Shopping & Clothing">Shopping & Clothing</option>
+                <option value="Salon / Grooming">Salon / Grooming</option>
+        
+                <!-- Miscellaneous -->
+                <option value="Gifts & Celebrations">Gifts & Celebrations</option>
+                <option value="Pet Care">Pet Care</option>
+            </select>
+        </div>
+        
+        
+        <div class="box">
+            <label for="expense-amount">Expense Amount (INR/USD):</label>
+            <input type="number" id="expense-amount" placeholder="Enter The Expense Amount">
+        </div>
+        
+        <div class="buttons">
+            <button onclick="addExpense()" class="add-btn">Add Expense</button>
+            <button onclick="resetValues()" class="reset-btn">Reset</button>
+        </div>
+        
+        <h3>Expense Summary</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Sub-Category</th>
+                    <th>Amount (INR/USD)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="expense-table"></tbody>
+        </table>
+        <br>
+        <h3>Total Expenses: <span id="total-expenses">0 INR/USD</span></h3>
+        <h3>Remaining Balance: <span id="remaining-balance">0 INR/USD</span></h3>
+    </div>
+
+    <script src="JS/Monthly Expense.js"></script>
+
+    <footer> 
+        <div class="footer-container"> 
+        <div class="footer-logo"> 
+            <img src="img/New Logo For PK.png" alt="Logo"> 
+            <h2>Converters App Online</h2> </div> <div class="footer-sections"><br><br>
+                <div class="footer-section"> <h3 style="color: blue;">Our Products</h3><br>
+                    <ul> 
+                        <li><a href="Index.html">Home</a></li><br>
+                        <li><a href="Currency.html">Currency Converter</a></li> <br>
+                        <li><a href="EMI.html">EMI Calculator</a></li> <br>
+                        <li><a href="Monthly Expense Calculator.html">Monthly Expense</a></li> <br>
+                        <li><a href="Electricity Bill.html">Electricity Bill Calculator</a></li> <br>
+                        <li><a href="Pressure.html">Pressure Converter</a></li> <br>
+                        <li><a href="Speed.html">Speed Converter</a></li> <br>
+                        <li><a href="Temperature.html">Temperature Converter</a></li> <br>
+                        <li><a href="unit converter.html">Unit Converter</a></li> <br>
+                        <li><a href="Volume.html">Volume Converter</a></li> <br>
+                        <li><a href="Under Construction.html">Light Converter</a></li> <br>
+                    </ul> 
+                </div> 
+                <div class="footer-section"> 
+                    <h3 style="color: blue;">Important Links</h3>
+                    <ul> 
+                        <li><a href="Under Construction.html">Privacy Policy</a></li> <br>
+                        <li><a href="Under Construction.html">Terms & Conditions</a></li> <br>
+                        <li><a href="Under Construction.html">Cookie  Policy</a></li> <br>     
+                    </ul> 
+                </div> 
+       <div class="footer-socials"> 
+        <h3 style="color: blue;">Follow our Socials</h3> 
+        
+       <ul> <li><a href="Index.html"><img src="img/facebook.png" alt="Facebook"></a></li> 
+        <li><a href="Index.html"><img src="img/instagram.png" alt="Instagram"></a></li> 
+        <li><a href="Index.html"><img src="img/Threads .png" alt="threads"></a></li> 
+        <li><a href="Index.html"><img src="img/twitter.png" alt="X(Formerly Twitter)"></a></li> 
+    </ul> 
+   </div> 
+   <div class="footer-bottom"> 
+    <p>&copy; Copyright 2025 Converters App Online.All Rights Reserved.</p> 
+  </div> 
+  </div> 
+     </footer> 
+
+     <script>
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="PtTEsh1h_nl0qzyAqcMAL";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+        </script>
+  </body>
+  </html>

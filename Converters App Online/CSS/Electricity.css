@@ -1,0 +1,243 @@
+/* Logo Style */
+.logo img {
+    height: 40px; 
+    width: auto;
+        position: absolute;
+        left: 20px; /* Adjust as needed */
+        top: 10px;  /* Adjust as needed */ 
+}
+
+/* Navigation Links aligned to the right */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-left: auto; 
+}
+
+.nav-links li a {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: orange;
+    color: white;
+}
+.navbar {
+    display: flex;
+    align-items: right;
+    justify-content: flex-start; /* Aligns items to the left */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-left: 80px; /* Adjust as needed */
+}
+
+.navbar ul li {
+    margin-right: 20px; /* Adjust spacing between links */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ff6b6b;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+}
+.container {
+    background: #2d1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#fixedPrice {
+    margin-bottom: 20px; /* Added space below fixed price input */
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; /* Added space above buttons */
+}
+button {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+.calculate-btn {
+    background: #007bff;
+}
+.calculate-btn:hover {
+    background: #0056b3;
+}
+.reset-btn {
+    background: #dc3545;
+}
+.reset-btn:hover {
+    background: #b52b37;
+}
+h3 {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+body {
+    background: linear-gradient(270deg, #ff9966, #ff5e62, #4a90e2, #50b848);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+footer {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-top: 1px solid #eaeaea;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    color: #333333;
+}
+
+.footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #555555;
+}
+
+.footer-section ul li a:hover {
+    color: #000000;
+}
+
+.footer-socials {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.footer-socials h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-socials ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-socials ul li {
+    margin-bottom: 5px;
+}
+
+.footer-socials ul li a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #777777;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-bottom ul li {
+    margin-bottom: 5px;
+}
+
+.footer-bottom ul li a {
+    text-decoration: none;
+    color: #555555;
+}
+
+.footer-bottom ul li a:hover {
+    color: #000000;
+}
